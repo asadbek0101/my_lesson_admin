@@ -1,0 +1,36 @@
+.custom-table{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+
+    table{
+        width: 100%;
+        position: relative;
+
+        thead{
+            position: sticky;
+            background-color: #fff;
+            top: 0;
+            
+            th {
+                font-weight: bold!important;
+                height: 50px !important;
+
+                .search-input{
+                    width: 100%;
+                    outline: none;
+                    height: 32px;
+                    padding-left: 10px;
+                }
+
+                input::placeholder {
+                    font-weight: bold;
+                    opacity: 0.5;
+                    color: black;
+                  }
+            }
+        }
+    }
+}
