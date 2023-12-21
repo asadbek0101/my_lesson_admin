@@ -1,0 +1,25 @@
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+name: 🚀 Deploy website on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2
+      - name: 📂 Sync files
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          username: root
+          server: 167.86.124.58
+          port: 22
+          sftp_only: true
+          password: Asadbek2001
+          local_path: "./*"
+          remote_path: ./admin.my-lessons.uz
